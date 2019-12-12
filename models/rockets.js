@@ -8,5 +8,8 @@ var Rocket = /** @class */ (function () {
     Rocket.prototype.addThruster = function (propulsor) {
         this.boosts.push(propulsor);
     };
+    Rocket.prototype.getSpeed = function () {
+        return this.boosts.reduce(function (a, b) { return a + b; });
+    };
     return Rocket;
 }());

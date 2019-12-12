@@ -1,14 +1,28 @@
 "use strict";
 var rocket;
 var flota = [];
+var output = document.getElementById('output');
+var speed = document.getElementById('speed');
 function addRocket(modelo, propulsores, velocidades) {
     rocket = new Rocket(modelo, propulsores);
-    flota.push(rocket);
     for (var i = 0; i < velocidades.length; i++) {
         rocket.addThruster(velocidades[i]);
     }
-    document.getElementById('output').innerHTML += "Rocket " + rocket.code + " has " + rocket.thrusters + " thrusters with a maxpower of (" + rocket.boosts + ")<br>";
+    flota.push(rocket);
+    var content = "Rocket " + rocket.code + " has " + rocket.thrusters + " thrusters with a maxpower of (" + rocket.boosts + ")<br><br>";
+    if (!output.innerHTML.includes(content)) {
+        output.innerHTML += "Rocket <span style=\"color:blue;\">" + rocket.code + "</span> has " + rocket.thrusters + " thrusters with a maxpower of (" + rocket.boosts + ")<br><br>";
+    }
 }
+// document.getElementById('speed').innerHTML = `${rocket.getSpeed()}`;
+document.getElementById("coet1").addEventListener("click", function () {
+    addRocket('32WESSDS', 3, [10, 30, 80]);
+});
+document.getElementById("coet2").addEventListener("click", function () {
+    if (output.innerHTML.length !== 0) {
+        addRocket('LDSFJA32', 6, [30, 40, 50, 50, 30, 10]);
+    }
+});
 /*
 function addRocket2() {
 rocket = new Rocket('LDSFJA32',6);

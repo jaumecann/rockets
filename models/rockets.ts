@@ -4,6 +4,7 @@ class Rocket{
    thrusters: number;
    boosts: Thruster[] = new Array();
 
+
     constructor(code:string, thrusters:number) {
         this.code = code;
         this.thrusters = thrusters;
@@ -13,4 +14,7 @@ class Rocket{
         this.boosts.push(propulsor);
     }
 
+    getSpeed(){
+        return this.boosts.reduce((a,b) => a+b)
+    }
 }
