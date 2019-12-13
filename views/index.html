@@ -7,15 +7,72 @@
     <title>Document</title>
     
 </head>
+
+
+<style>
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: beige;
+}
+
+button {
+    border: none;
+    text-shadow: ;
+    background-color:white;
+    border: solid 2px #502d15;
+    color: #833c0d;
+    font-size: 20px;
+    margin: 5px;
+    padding: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 50px;
+    box-shadow: 5px 5px #867d71;
+}
+
+#speed, #speed2 {
+    color: orange;
+    background-color: black;
+    width: auto;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+</style>
 <body>
-    <div style="width:50%; margin:50px auto;">
+    <div style="margin:50px auto; width:500px;">
+
+     <div style="border-radius: 10px;background-color:lightgrey; padding:20px; display:flex; justify-content: space-around;">
      <button id="coet1">Create Rocket1</button>
      <button id="coet2">Create Rocket2</button>
+     
+     </div>   
+     
      <p id="output"></p>
     
-     <p id='speed'></p>   
+     <div style="display:flex;">
 
-    </div>
+     <div style="margin-left: 20px;">
+     <span><strong>COHETE 1: Velocidad</strong></span> 
+     <p id='speed'>0</p>  
+     <button id='up'>Acelera cohete 1</button>
+     <button id='down'>Frena cohete 1</button> 
+     </div>
+
+
+        <div>
+        <span><strong>COHETE 2: Velocidad</strong></span> 
+        <p id='speed2'>0</p>  
+        <button id='up2'>Acelera cohete 2</button>
+        <button id='down2'>Frena cohete 2</button> 
+        </div>
+
+     </div>
+   
+
+    
 
 
   
