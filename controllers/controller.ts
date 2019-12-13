@@ -3,8 +3,7 @@ let rocket: Rocket;
 
 let flota:any[] = [];
 
-let output:any = document.getElementById('output')
-let speed = document.getElementById('speed')
+let output:any = document.getElementById('output');
 
 
 // CREAR COBETE
@@ -60,30 +59,3 @@ document.getElementById("down2").addEventListener("click", function(){
     document.getElementById("speed2").innerHTML = flota[1].addSpeed(-10);;
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function addRocket2() {
-rocket = new Rocket('LDSFJA32',6);
-flota.push(rocket);
-
-document.getElementById('output2').innerHTML = `Rocket ${rocket.code} has ${rocket.thrusters} thrusters`;
-
-}
-
-*/
