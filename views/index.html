@@ -16,6 +16,10 @@ body {
     background-color: beige;
 }
 
+p {
+    margin: 0;
+}
+
 button {
     border: none;
     text-shadow: ;
@@ -23,8 +27,8 @@ button {
     border: solid 2px #502d15;
     color: #833c0d;
     font-size: 20px;
-    margin: 5px;
-    padding: 15px;
+    margin: 15px 5px;
+    padding: 5px 15px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border-radius: 50px;
     box-shadow: 5px 5px #867d71;
@@ -39,11 +43,15 @@ button {
 
 }
 
+.velocidad {
+    visibility: hidden;
+}
+
 </style>
 <body>
     <div style="margin:50px auto; width:500px;">
 
-     <div style="border-radius: 10px;background-color:lightgrey; padding:20px; display:flex; justify-content: space-around;">
+     <div style="border-radius: 10px;background-color:lightgrey; padding:20px; display:flex; justify-content: space-around; margin-bottom: 20px;">
      <button id="coet1">Create Rocket1</button>
      <button id="coet2">Create Rocket2</button>
      
@@ -54,16 +62,18 @@ button {
      <div style="display:flex;">
 
      <div style="margin-left: 20px;">
-     <span><strong>COHETE 1: Velocidad</strong></span> 
-     <p id='speed'>0</p>  
+        <p style="height:100px; padding-top:20px;"><span class="velocidad"><strong>COHETE 1: Velocidad</strong></span> 
+        <span id='speed'></span> </p>
      <button id='up'>Acelera cohete 1</button>
      <button id='down'>Frena cohete 1</button> 
      </div>
 
 
         <div>
-        <span><strong>COHETE 2: Velocidad</strong></span> 
-        <p id='speed2'>0</p>  
+        <p style="height:100px; padding-top:20px;">
+        <span class="velocidad"><strong>COHETE 2: Velocidad</strong></span>
+        <span id='speed2'></span>
+       </p> 
         <button id='up2'>Acelera cohete 2</button>
         <button id='down2'>Frena cohete 2</button> 
         </div>
